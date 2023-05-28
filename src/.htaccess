@@ -1,0 +1,5 @@
+RewriteEngine on
+
+# Encaminha todas as requisições para index.php.
+RewriteCond %{REQUEST_URI} !^/index.php
+RewriteRule ^.*$ /index.php [L,QSA]

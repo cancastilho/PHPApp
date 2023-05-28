@@ -1,0 +1,1 @@
+docker run --rm --env-file=config/secrets.env --mount type=bind,src="$(pwd)/src",target=/app/src --mount type=bind,src="$(pwd)/testes",target=/app/testes --mount type=bind,src="$(pwd)/src",target=/var/www/html --name php-app-testes php-app-testes

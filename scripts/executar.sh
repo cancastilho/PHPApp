@@ -1,0 +1,1 @@
+docker run --rm -p 80:80 --env-file config/secrets.env --mount type=bind,src="$(pwd)/src",target=/var/www/html --name php-app-dev php-app

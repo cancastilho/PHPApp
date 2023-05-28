@@ -1,0 +1,1 @@
+docker run --rm -p 80:80 --env-file config/secrets.env --name php-app-dev php-app
