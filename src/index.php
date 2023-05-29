@@ -1,3 +1,6 @@
 <?php
 
-echo 'Olá';
+use PHPApp\Ldap;
+
+$ldap = new Ldap();
+$ldap->testarConexao();

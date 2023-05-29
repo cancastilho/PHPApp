@@ -14,10 +14,14 @@ rm -rf /var/lib/apt/lists/* && \
 rm -rf /tmp/*
 
 
+COPY docker/cert.crt /usr/local/share/ca-certificates/cert.crt 
+RUN update-ca-certificates
+
 COPY src /var/www/html/
 RUN echo "ServerName localhost" >> /etc/apache2/apache2.conf
 
 ##TODO
+
 # COPY docker/php.ini /usr/local/etc/php/php.ini
 # COPY docker/security.conf /etc/apache2/conf-enabled/security.conf
 # COPY docker/apache2.conf /etc/apache2/apache2.conf

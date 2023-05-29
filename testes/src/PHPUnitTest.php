@@ -14,7 +14,7 @@ final class PHPUnitTest extends TestCase
         $this->assertEmpty($variavelNaoDefinida); 
     }
 
-    public function testDeveExperarQueTesteLanceExcecao(): void
+    public function testDeveEsperarQueTesteLanceExcecao(): void
     {
         $this->expectException(Throwable::class);
         $divisaoPorZero = 1 / 0; // Lança exceção!
